@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurocore Cyber-Defense // EDR &amp; SIEM Autónomo | NCV Systems</title>
+  <meta name="description" content="Descubre Neurocore, la solución autónoma de detección y respuesta en tiempo real con mitigación de amenazas por debajo de los 0.35ms mediante Edge AI.">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <style>
+    /* Specific styling for the stopwatch simulator layout */
+    .simulator-container {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    
+    @media (max-width: 992px) {
+      .simulator-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      font-family: var(--font-sans);
+    }
+
+    .matrix-table th, .matrix-table td {
+      padding: 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .matrix-table th {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    .matrix-table tr:hover td {
+      background: rgba(56, 189, 248, 0.02);
+    }
+
+    .matrix-table td.highlight {
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .matrix-table td.secure-cell {
+      color: var(--accent-green);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="header-global">
+    <div class="container nav-container">
+      <a href="/" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        NCV SYSTEMS
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#x2630;</button>
+      
+      <ul class="nav-menu" role="navigation">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/neurocore/" class="nav-link">Neurocore</a></li>
+        <li><a href="/vanguard-os/" class="nav-link">Vanguard OS</a></li>
+        <li><a href="/servicios/" class="nav-link">Servicios</a></li>
+        <li><a href="/nosotros/" class="nav-link">Nosotros</a></li>
+        <li><a href="/contacto/" class="nav-link">Contacto</a></li>
+        <li><a href="/contacto/" class="btn-cta">Solicitar Demo</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- SUBPAGE HERO -->
+    <section class="subpage-hero">
+      <div class="container">
+        <span class="section-tag">// MÓDULO DE DEFENSA AUTÓNOMO</span>
+        <h1 class="hero-title">NEUROCORE <span>CYBER-DEFENSE</span></h1>
+        <p class="hero-desc" style="max-width: 700px;">El primer sistema B2B de detección y contención automatizada a nivel de núcleo. Analiza, correlaciona y neutraliza intrusiones complejas antes de que requieran intervención humana.</p>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SIMULATION SECTION -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PRUEBA DE VELOCIDAD DE RESPUESTA</span>
+          <h2 class="section-title">Mitigación Extrema en 0.35ms</h2>
+          <p>Experimenta en tiempo real la diferencia de rendimiento de nuestra IA local (Edge AI) frente a ataques de desbordamiento de búfer o inyección de malware.</p>
+        </div>
+
+        <div class="simulator-container">
+          <!-- Stopwatch display widget -->
+          <div class="glass-panel stopwatch-widget cyber-corners">
+            <h3 class="font-tech" style="font-size: 0.9rem; margin-bottom: 2rem; color: var(--text-secondary);">Reloj de Contención Criptográfica</h3>
+            
+            <div class="stopwatch-ring">
+              <div class="stopwatch-inner">
+                <span id="stopwatchValue" class="stopwatch-number">0.00</span>
+                <span class="stopwatch-unit">milisegundos</span>
+              </div>
+            </div>
+            
+            <button id="simBtn" class="btn-primary btn-trigger-sim">Simular Intrusión de Red</button>
+            <p class="metric-desc" style="margin-top: 1rem;">Haz clic para desplegar una simulación de exploit y medir la latencia de aislamiento.</p>
+          </div>
+
+          <!-- Console log output widget -->
+          <div class="console-box">
+            <div class="console-header">
+              <div class="console-dots">
+                <div class="console-dot" style="background-color: #ef4444;"></div>
+                <div class="console-dot" style="background-color: #f97316;"></div>
+                <div class="console-dot" style="background-color: #22c55e;"></div>
+              </div>
+              <span class="console-title">SIEM LOGS // NEUROCORE_AGENT_01</span>
+            </div>
+            <div id="simConsoleBody" class="console-body">
+              <div class="console-line">// ESPERANDO INTRUSIÓN... ESCUCHANDO EN EL PUERTO 443</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL DETAILS -->
+    <section class="section-padding" style="background: rgba(2, 6, 23, 0.4); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// DETALLES TÉCNICOS DE AVANZADA</span>
+          <h2 class="section-title">Protección por Debajo de la Capa de Sistema</h2>
+          <p>Neurocore evita el desvío de la telemetría a servidores remotos. Ejecuta un análisis de inferencia estadística en hardware local para lograr un control total de la infraestructura.</p>
+        </div>
+
+        <div class="tech-details">
+          <div class="tech-card glass-panel cyber-corners">
+            <span class="tech-tag">01 / DETECCION LOCAL (EDGE AI)</span>
+            <h3 style="margin-bottom: 1rem;">Modelos ML Optimistas</h3>
+            <p>Modelos matemáticos locales entrenados específicamente para detectar anomalías de red sin latencia de llamadas de red en la nube, operando de manera aislada y hermética.</p>
+          </div>
+          <div class="tech-card glass-panel cyber-corners">
+            <span class="tech-tag">02 / AISLAMIENTO DE SOCKETS</span>
+            <h3 style="margin-bottom: 1rem;">Neutralización a Bajo Nivel</h3>
+            <p>Al identificar un patrón malicioso, Neurocore reprograma directamente los sockets de red a nivel de firmware, cancelando el tráfico ofensivo sin necesidad de apagar la máquina física.</p>
+          </div>
+          <div class="tech-card glass-panel cyber-corners">
+            <span class="tech-tag">03 / TELEMETRÍA UNIFICADA</span>
+            <h3 style="margin-bottom: 1rem;">Procesamiento Híbrido</h3>
+            <p>Se integra de forma transparente con tus repositorios de registros de seguridad existentes (SIEM) sin saturar los canales de red gracias a un formateado técnico ultra-comprimido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON MATRIX -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// VELOCIDAD Y CONTENCIÓN</span>
+          <h2 class="section-title">Neurocore vs. Métodos Tradicionales</h2>
+          <p>Comparación analítica de la latencia en las fases críticas de detección, análisis y mitigación de intrusiones corporativas.</p>
+        </div>
+
+        <div class="glass-panel" style="overflow-x: auto; padding: 1rem;">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>SIEM / EDR Tradicional</th>
+                <th>Soluciones Cloud SaaS</th>
+                <th>NCV Neurocore</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lugar de Análisis</strong></td>
+                <td>Agente de software en terminal</td>
+                <td>Nube externa (Servidores globales)</td>
+                <td class="highlight">Edge AI integrado localmente</td>
+              </tr>
+              <tr>
+                <td><strong>Inferencia de Amenaza</strong></td>
+                <td>Basado en firmas conocidas</td>
+                <td>Análisis heurístico en nube</td>
+                <td class="highlight">Modelos ML a nivel Kernel</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo de Detección</strong></td>
+                <td>Segundos o minutos</td>
+                <td>5 - 15 segundos</td>
+                <td class="secure-cell">0.08 ms</td>
+              </tr>
+              <tr>
+                <td><strong>Aislamiento de Terminal</strong></td>
+                <td>Manual por analistas (SOC)</td>
+                <td>Automatizado vía API de terceros</td>
+                <td class="secure-cell">0.27 ms</td>
+              </tr>
+              <tr>
+                <td><strong>Tiempo Total de Mitigación</strong></td>
+                <td>Horas o días</td>
+                <td>Minutos (Depende de API/Nube)</td>
+                <td class="secure-cell" style="text-shadow: 0 0 10px rgba(34,197,94,0.4);">0.35 ms</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATION & COMPATIBILITY -->
+    <section class="section-padding" style="background: rgba(2, 6, 23, 0.4); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// ARQUITECTURA DE INTEGRACIÓN</span>
+          <h2 class="section-title">Compatibilidad Corporativa</h2>
+          <p>Neurocore se acopla a la infraestructura actual a través de conectores optimizados, permitiendo una instalación no disruptiva.</p>
+        </div>
+
+        <div class="grid-metrics" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Nubes Híbridas</h3>
+            <p>Soporte nativo para cargas de trabajo en AWS Outposts, Azure Stack, Google Distributed Cloud y entornos OpenStack privados.</p>
+          </div>
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Sistemas Legados B2B</h3>
+            <p>Agentes ultralivianos de bajo consumo de memoria compilados para Unix, RedHat Enterprise Linux, AIX y Windows Server heredados.</p>
+          </div>
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Entornos de IoT / OT</h3>
+            <p>Capacidad de ejecución modular en hardware ARM restringido para la protección de terminales ICS, redes de energía y transporte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-global">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            NCV SYSTEMS
+          </a>
+          <p class="footer-desc">Ciberseguridad de grado industrial y soberanía tecnológica B2B para Latinoamérica y el mundo.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Productos</h4>
+          <ul class="footer-links">
+            <li><a href="/neurocore/" class="footer-link">Neurocore Cyber-Defense</a></li>
+            <li><a href="/vanguard-os/" class="footer-link">Vanguard OS</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="/servicios/" class="footer-link">Servicios de Red Team</a></li>
+            <li><a href="/nosotros/" class="footer-link">Filosofía y Misión</a></li>
+            <li><a href="/contacto/" class="footer-link">Portal de Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="/contacto/" class="footer-link">Canal de Reporte Seguro</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 NCV Systems. Todos los derechos reservados.</span>
+        
+        <div class="status-widget">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span>STATUS DE RED: OPERATIVO</span>
+          </div>
+          <span class="enc-badge">ENC: TLSv1.3 // SECURE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+    // --- STOPWATCH ATTACK SIMULATOR CODE ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const simBtn = document.getElementById('simBtn');
+      const stopwatchValue = document.getElementById('stopwatchValue');
+      const simConsoleBody = document.getElementById('simConsoleBody');
+      let isRunning = false;
+
+      simBtn.addEventListener('click', () => {
+        if (isRunning) return;
+        isRunning = true;
+        simBtn.disabled = true;
+        simBtn.textContent = 'Mitigando Amenaza...';
+
+        // Clear console and show initial threat detection
+        simConsoleBody.innerHTML = '';
+        appendLog('▲ INTRUSIÓN DETECTADA // EXPLOIT DISPARADO', 'warning');
+        appendLog('Desbordamiento de búfer en pila local (stack buffer overflow bypass)...', 'info');
+
+        let start = 0;
+        const target = 0.35;
+        const duration = 1500; // Stretch real-time 0.35ms into 1.5s for human legibility
+        const startTime = performance.now();
+
+        // Log triggers at timeline points during the 1.5 seconds simulation
+        const logEvents = [
+          { timePct: 0.15, text: 'Iniciando módulo local Edge AI para análisis estructural...', type: 'info' },
+          { timePct: 0.40, text: '✓ Coincidencia detectada: Firma de comportamiento malicioso identificada.', type: 'success' },
+          { timePct: 0.60, text: 'Disparando instrucción preventiva: Aislamiento del socket 0x7F41A9...', type: 'warning' },
+          { timePct: 0.85, text: 'Cortando conexión física de red (Kernel virtual socket lock)...', type: 'info' },
+          { timePct: 1.00, text: '✓ TERMINAL NEUTRALIZADO // Mitigación completada con éxito en 0.35ms.', type: 'success' }
+        ];
+
+        let eventIndex = 0;
+
+        function updateSim() {
+          const now = performance.now();
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          // Update ticking display (ticking up to 0.35)
+          const currentVal = (progress * target).toFixed(2);
+          stopwatchValue.textContent = currentVal;
+
+          // Check if we need to emit logs based on time progress
+          while (eventIndex < logEvents.length && progress >= logEvents[eventIndex].timePct) {
+            appendLog(logEvents[eventIndex].text, logEvents[eventIndex].type);
+            eventIndex++;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateSim);
+          } else {
+            // Finished
+            stopwatchValue.textContent = '0.35';
+            simBtn.disabled = false;
+            simBtn.textContent = 'Reiniciar Simulador';
+            isRunning = false;
+          }
+        }
+
+        requestAnimationFrame(updateSim);
+      });
+
+      function appendLog(text, type) {
+        const line = document.createElement('div');
+        line.className = 'console-line';
+        if (type === 'success') line.classList.add('success');
+        if (type === 'warning') line.classList.add('warning');
+        
+        line.textContent = `[${new Date().toLocaleTimeString()}] ${text}`;
+        simConsoleBody.appendChild(line);
+        simConsoleBody.scrollTop = simConsoleBody.scrollHeight;
+      }
+    });
+  </script>
+</body>
+</html>

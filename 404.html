@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error 404 // Recurso Aislado | NCV Systems</title>
+  <meta name="description" content="Error 404. El recurso solicitado no se encuentra disponible o ha sido aislado dentro de nuestro perímetro de seguridad.">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <style>
+    .error-wrapper {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 8rem;
+    }
+    
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: clamp(4rem, 15vw, 8rem);
+      font-weight: 800;
+      color: var(--accent-red);
+      text-shadow: 0 0 20px var(--accent-red-glow);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    
+    .error-title {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+    
+    .error-desc {
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="header-global">
+    <div class="container nav-container">
+      <a href="/" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        NCV SYSTEMS
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#x2630;</button>
+      
+      <ul class="nav-menu" role="navigation">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/neurocore/" class="nav-link">Neurocore</a></li>
+        <li><a href="/vanguard-os/" class="nav-link">Vanguard OS</a></li>
+        <li><a href="/servicios/" class="nav-link">Servicios</a></li>
+        <li><a href="/nosotros/" class="nav-link">Nosotros</a></li>
+        <li><a href="/contacto/" class="nav-link">Contacto</a></li>
+        <li><a href="/contacto/" class="btn-cta">Solicitar Demo</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="error-wrapper">
+      <div class="error-code">404</div>
+      <h2 class="error-title">// CONEXIÓN RECHAZADA // RECURSO AISLADO</h2>
+      <p class="error-desc">El endpoint solicitado no existe o ha sido movido a una partición de red restringida para resguardar la integridad del sistema.</p>
+      
+      <div style="margin-bottom: 3rem;">
+        <div class="console-box" style="width: 320px; text-align: left; margin: 0 auto;">
+          <div class="console-header">
+            <span class="console-title">DIAGNÓSTICO DEL NÚCLEO</span>
+          </div>
+          <div class="console-body" style="height: 110px; font-size: 0.8rem; color: var(--accent-red);">
+            <div class="console-line">STATUS: ERR_RESOURCE_NOT_FOUND</div>
+            <div class="console-line">PORT: 443 // ADDR: ANY</div>
+            <div class="console-line">LOGGING: IP registrada en auditoría local.</div>
+            <div class="console-line">RESOLUCIÓN: Redirigiendo a raíz...</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="/" class="btn-primary">Volver al Nodo Principal (Inicio)</a>
+    </div>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-global">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            NCV SYSTEMS
+          </a>
+          <p class="footer-desc">Ciberseguridad de grado industrial y soberanía tecnológica B2B para Latinoamérica y el mundo.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Productos</h4>
+          <ul class="footer-links">
+            <li><a href="/neurocore/" class="footer-link">Neurocore Cyber-Defense</a></li>
+            <li><a href="/vanguard-os/" class="footer-link">Vanguard OS</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="/servicios/" class="footer-link">Servicios de Red Team</a></li>
+            <li><a href="/nosotros/" class="footer-link">Filosofía y Misión</a></li>
+            <li><a href="/contacto/" class="footer-link">Portal de Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="/contacto/" class="footer-link">Canal de Reporte Seguro</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 NCV Systems. Todos los derechos reservados.</span>
+        
+        <div class="status-widget">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span>STATUS DE RED: OPERATIVO</span>
+          </div>
+          <span class="enc-badge">ENC: TLSv1.3 // SECURE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

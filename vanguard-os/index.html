@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanguard OS // Plataforma de Soberanía Digital | NCV Systems</title>
+  <meta name="description" content="Vanguard OS, el entorno operativo seguro e inmutable diseñado para el control de infraestructura crítica y estricta gobernanza de datos.">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <style>
+    .lock-widget-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 992px) {
+      .lock-widget-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--border-light);
+    }
+    
+    .status-badge.online {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    
+    .status-badge.locked {
+      background: rgba(34, 197, 94, 0.08);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+      animation: pulseGreenBorder 2.5s infinite;
+    }
+    
+    @keyframes pulseGreenBorder {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.2); }
+      50% { box-shadow: 0 0 10px 4px rgba(34, 197, 94, 0.4); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="header-global">
+    <div class="container nav-container">
+      <a href="/" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        NCV SYSTEMS
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#x2630;</button>
+      
+      <ul class="nav-menu" role="navigation">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/neurocore/" class="nav-link">Neurocore</a></li>
+        <li><a href="/vanguard-os/" class="nav-link">Vanguard OS</a></li>
+        <li><a href="/servicios/" class="nav-link">Servicios</a></li>
+        <li><a href="/nosotros/" class="nav-link">Nosotros</a></li>
+        <li><a href="/contacto/" class="nav-link">Contacto</a></li>
+        <li><a href="/contacto/" class="btn-cta">Solicitar Demo</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- SUBPAGE HERO -->
+    <section class="subpage-hero">
+      <div class="container">
+        <span class="section-tag">// ENTORNO OPERATIVO INMUTABLE</span>
+        <h1 class="hero-title">VANGUARD <span>OS</span></h1>
+        <p class="hero-desc" style="max-width: 700px;">El primer sistema operativo de soberanía digital diseñado para resguardar bases de datos nacionales, infraestructuras de telecomunicación y servidores de alta criticidad.</p>
+      </div>
+    </section>
+
+    <!-- CORE FEATURES TABS SECTION -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// CAPACIDADES SOBERANAS</span>
+          <h2 class="section-title">Pilares de la Ciber-Soberanía</h2>
+          <p>Explore las características de protección que hacen de Vanguard OS el núcleo más seguro para operaciones corporativas y gubernamentales.</p>
+        </div>
+
+        <div class="tab-container">
+          <!-- Tab Navigation Buttons -->
+          <div class="tab-headers">
+            <button class="tab-btn active" data-tab="airgap">Entornos Air-Gapped</button>
+            <button class="tab-btn" data-tab="cryptography">Criptografía Modular</button>
+            <button class="tab-btn" data-tab="logs">Auditoría Inmutable</button>
+            <button class="tab-btn" data-tab="compliance">Cumplimiento Normativo</button>
+          </div>
+
+          <!-- Tab Panels Content -->
+          <div class="tab-panels">
+            <!-- Panel 1: Air-Gap -->
+            <div id="airgap" class="tab-panel active">
+              <div class="tab-content-grid">
+                <div>
+                  <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-cyan);">Aislamiento Físico Total</h3>
+                  <p style="margin-bottom: 1.5rem;">Vanguard OS está desarrollado específicamente para operar en servidores sin conexión externa a Internet. Garantiza el procesamiento local autónomo de todas las tareas críticas, eliminando vectores de infiltración remota.</p>
+                  <p>Incluso en configuraciones híbridas, Vanguard OS posee un interruptor lógico de aislamiento perimetral instantáneo que corta el acceso externo manteniendo la red de área local intacta.</p>
+                </div>
+                <div class="cyber-panel cyber-corners">
+                  <span class="tech-tag">// PROTOCOLO DETALLE</span>
+                  <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                    - Cero llamadas a DNS externas<br>
+                    - Bloqueo de puertos a nivel de silicio (firmware)<br>
+                    - Firma de paquetes locales exclusiva<br>
+                    - Actualizaciones firmadas en medios físicos offline
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Cryptography -->
+            <div id="cryptography" class="tab-panel">
+              <div class="tab-content-grid">
+                <div>
+                  <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-cyan);">Criptografía Poscuántica Modular</h3>
+                  <p style="margin-bottom: 1.5rem;">Cifrado de datos tanto en reposo como en tránsito utilizando algoritmos matemáticos modulares. Incorporamos librerías poscuánticas listas para resistir futuras capacidades de descifrado avanzadas.</p>
+                  <p>La modularidad permite reemplazar suites de cifrado completas al vuelo y sin necesidad de recompilar el núcleo del sistema, adaptándose a directrices militares o bancarias locales.</p>
+                </div>
+                <div class="cyber-panel cyber-corners">
+                  <span class="tech-tag">// LIBRERÍAS SOPORTADAS</span>
+                  <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                    - AES-XTS-512 &amp; ChaCha20-Poly1305<br>
+                    - Kyber (ML-KEM) para intercambio de llaves<br>
+                    - Dilithium (ML-DSA) para firmas de sistema<br>
+                    - Rotación dinámica de llaves por sesión
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Logs -->
+            <div id="logs" class="tab-panel">
+              <div class="tab-content-grid">
+                <div>
+                  <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-cyan);">Registros a Prueba de Manipulación</h3>
+                  <p style="margin-bottom: 1.5rem;">Toda acción administrativa en Vanguard OS es indexada en una cadena criptográfica de auditoría inmutable (similar a blockchain local). Los atacantes internos o externos no pueden borrar sus huellas del sistema.</p>
+                  <p>Los archivos de logs se firman secuencialmente y se distribuyen automáticamente en múltiples nodos redundantes locales en milisegundos.</p>
+                </div>
+                <div class="cyber-panel cyber-corners">
+                  <span class="tech-tag">// INTEGRIDAD DE HISTORIAL</span>
+                  <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                    - Hash encadenado SHA-256 continuo<br>
+                    - Firma ciega de eventos del kernel<br>
+                    - Encriptación forzada en registros de depuración<br>
+                    - Exportación segura syslog unidireccional
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Compliance -->
+            <div id="compliance" class="tab-panel">
+              <div class="tab-content-grid">
+                <div>
+                  <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-cyan);">Cumplimiento Normativo Integrado</h3>
+                  <p style="margin-bottom: 1.5rem;">Cumple de forma inmediata con los marcos internacionales más estrictos como NIST SP 800-53, ISO/IEC 27001, PCI-DSS y las regulaciones locales latinoamericanas de protección de datos financieros.</p>
+                  <p>El sistema genera reportes listos para auditorías regulatorias del Banco Central y entidades nacionales de control de forma completamente automatizada.</p>
+                </div>
+                <div class="cyber-panel cyber-corners">
+                  <span class="tech-tag">// MARCOS DE GOBERNANZA</span>
+                  <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                    - Reportes NIST automatizados de estado<br>
+                    - Políticas de control de acceso RBAC estrictas<br>
+                    - Controles de auditoría ISO 27001 preconfigurados<br>
+                    - Historial de accesos exportable cifrado
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ISOLATION LOCK SYSTEM -->
+    <section class="section-padding" style="background: rgba(2, 6, 23, 0.4); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PROTOCOLO DE CRISIS DE SEGURIDAD</span>
+          <h2 class="section-title">Bloqueo Perimetral Lógico</h2>
+          <p>En caso de una brecha activa detectada por Neurocore, Vanguard OS activa un aislamiento lógico instantáneo de la red local, cortando la salida al exterior para evitar la exfiltración.</p>
+        </div>
+
+        <div class="lock-widget-container">
+          <!-- Text explanation and action -->
+          <div>
+            <div style="margin-bottom: 1.5rem;">
+              <span id="systemStatusBadge" class="status-badge online">
+                <span class="status-dot" style="background-color: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan);"></span>
+                SISTEMA OPERANDO EN HÍBRIDO (CONEXIÓN EXTERNA ACTIVA)
+              </span>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Simulador de Aislamiento "Air-Gap"</h3>
+            <p style="margin-bottom: 1.5rem;">Presione el botón para simular una orden de aislamiento perimetral. Podrá observar los pasos lógicos e inmutables que el kernel de Vanguard OS ejecuta en tiempo de ejecución para asegurar los datos.</p>
+            <button id="lockBtn" class="btn-primary" style="background-color: #f97316; border-color: #f97316; box-shadow: 0 4px 15px rgba(249,115,22,0.2);">Simular Cierre Air-Gap</button>
+          </div>
+
+          <!-- Console logging display -->
+          <div class="console-box">
+            <div class="console-header">
+              <div class="console-dots">
+                <div class="console-dot" style="background-color: #ef4444;"></div>
+                <div class="console-dot" style="background-color: #f97316;"></div>
+                <div class="console-dot" style="background-color: #22c55e;"></div>
+              </div>
+              <span class="console-title">VANGUARD OS CORE // SECURITY CONTROL</span>
+            </div>
+            <div id="lockConsoleBody" class="console-body">
+              <div class="console-line">// NÚCLEO DE CRIPTOGRAFÍA ACTIVO. MONITOREANDO INTERFACES.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-global">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            NCV SYSTEMS
+          </a>
+          <p class="footer-desc">Ciberseguridad de grado industrial y soberanía tecnológica B2B para Latinoamérica y el mundo.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Productos</h4>
+          <ul class="footer-links">
+            <li><a href="/neurocore/" class="footer-link">Neurocore Cyber-Defense</a></li>
+            <li><a href="/vanguard-os/" class="footer-link">Vanguard OS</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="/servicios/" class="footer-link">Servicios de Red Team</a></li>
+            <li><a href="/nosotros/" class="footer-link">Filosofía y Misión</a></li>
+            <li><a href="/contacto/" class="footer-link">Portal de Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="/contacto/" class="footer-link">Canal de Reporte Seguro</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 NCV Systems. Todos los derechos reservados.</span>
+        
+        <div class="status-widget">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span>STATUS DE RED: OPERATIVO</span>
+          </div>
+          <span class="enc-badge">ENC: TLSv1.3 // SECURE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- TAB SELECTION CODE ---
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tabId = btn.getAttribute('data-tab');
+          
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          tabPanels.forEach(panel => {
+            if (panel.id === tabId) {
+              panel.classList.add('active');
+            } else {
+              panel.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // --- AIR-GAP PERIMETER LOCK CODE ---
+      const lockBtn = document.getElementById('lockBtn');
+      const lockConsoleBody = document.getElementById('lockConsoleBody');
+      const systemStatusBadge = document.getElementById('systemStatusBadge');
+      let isLocked = false;
+
+      lockBtn.addEventListener('click', () => {
+        if (isLocked) return;
+        isLocked = true;
+        lockBtn.disabled = true;
+        lockBtn.textContent = 'EJECUTANDO CORTAFUEGOS...';
+
+        lockConsoleBody.innerHTML = '';
+        appendLockLog('▲ DETECTADA ALERTA DE SEVERIDAD ALTA DE NEUROCORE // INTRUSIÓN SOSPECHOSA', 'warning');
+        appendLockLog('Iniciando protocolo de Aislamiento Lógico Perimetral (Air-Gap L3/L4)...', 'info');
+
+        const lockLogs = [
+          { delay: 400, text: 'Cortando comunicación externa de red WAN en interfaces enrutadoras...', type: 'info' },
+          { delay: 800, text: '✗ RUTA EXTERNA DESACTIVADA: 0.0.0.0/0 eliminada de tablas de ruteo.', type: 'warning' },
+          { delay: 1200, text: 'Configurando cortafuegos local (iptables block ALL outward traffic)...', type: 'info' },
+          { delay: 1600, text: 'Habilitando Sandbox Lock en todas las particiones del sistema de archivos local...', type: 'info' },
+          { delay: 2000, text: 'Escribiendo firmas SHA-256 de integridad en bloque inmutable nº 984AC...', type: 'success' },
+          { delay: 2400, text: '✓ SEGURIDAD GARANTIZADA: Sistemas completamente aislados del exterior.', type: 'success' },
+          { delay: 2800, text: '▲ ESTADO LÓGICO DEL NÚCLEO: AIR-GAPPED // COMUNICACIÓN INTERNA ACTIVA.', type: 'success' }
+        ];
+
+        lockLogs.forEach((log) => {
+          setTimeout(() => {
+            appendLockLog(log.text, log.type);
+            
+            // On final line, update UI state
+            if (log.text.includes('AIR-GAPPED')) {
+              systemStatusBadge.className = 'status-badge locked';
+              systemStatusBadge.innerHTML = `
+                <span class="status-dot" style="background-color: var(--accent-green); box-shadow: 0 0 8px var(--accent-green);"></span>
+                ESTADO AIR-GAP ACTIVO // SISTEMA PROTEGIDO OFFLINE
+              `;
+              lockBtn.textContent = 'Aislamiento Completo';
+            }
+          }, log.delay);
+        });
+      });
+
+      function appendLockLog(text, type) {
+        const line = document.createElement('div');
+        line.className = 'console-line';
+        if (type === 'success') line.classList.add('success');
+        if (type === 'warning') line.classList.add('warning');
+        
+        line.textContent = `[VANGUARD_SEC] ${text}`;
+        lockConsoleBody.appendChild(line);
+        lockConsoleBody.scrollTop = lockConsoleBody.scrollHeight;
+      }
+    });
+  </script>
+</body>
+</html>

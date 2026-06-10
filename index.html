@@ -1,15 +1,279 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCV Systems</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #0f172a; color: #fff; }
-        h1 { color: #38bdf8; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>NCV Systems // Ciberdefensa Autónoma y Soberanía Digital B2B</title>
+  <meta name="description" content="Desarrollamos soluciones soberanas de ciberseguridad para infraestructuras críticas y finanzas. SIEM/EDR autónomo con mitigación en 0.35ms y Vanguard OS.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ncvsystems.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ncvsystems.github.io/">
+  <meta property="og:title" content="NCV Systems // Ciberdefensa Autónoma B2B">
+  <meta property="og:description" content="Defensa autónoma con IA en local y entornos de soberanía de datos inmutables. Diseñado para banca e infraestructura crítica en Latinoamérica.">
+  <meta property="og:image" content="https://ncvsystems.github.io/assets/ncv-card.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ncvsystems.github.io/">
+  <meta property="twitter:title" content="NCV Systems // Ciberdefensa Autónoma B2B">
+  <meta property="twitter:description" content="Defensa autónoma con IA en local y entornos de soberanía de datos inmutables. Diseñado para banca e infraestructura crítica en Latinoamérica.">
+  <meta property="twitter:image" content="https://ncvsystems.github.io/assets/ncv-card.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>NCV Systems - Próximamente</h1>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="header-global">
+    <div class="container nav-container">
+      <a href="/" class="logo-link" id="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        NCV SYSTEMS
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#x2630;</button>
+      
+      <ul class="nav-menu" role="navigation">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/neurocore/" class="nav-link">Neurocore</a></li>
+        <li><a href="/vanguard-os/" class="nav-link">Vanguard OS</a></li>
+        <li><a href="/servicios/" class="nav-link">Servicios</a></li>
+        <li><a href="/nosotros/" class="nav-link">Nosotros</a></li>
+        <li><a href="/contacto/" class="nav-link">Contacto</a></li>
+        <li><a href="/contacto/" class="btn-cta">Solicitar Demo</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-wrapper">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="container">
+        <div class="hero-content">
+          <div class="tagline">SECURE OPERATING ENVIRONMENT // LVL-0</div>
+          <h1 class="hero-title">Soberanía Digital y <span>Defensa Autónoma</span></h1>
+          <p class="hero-desc">Protegemos la infraestructura crítica y el sector financiero con tecnología propia de respuesta automática. Sin dependencias externas. Reducción drástica del riesgo operacional en milisegundos.</p>
+          <div class="hero-actions">
+            <a href="/contacto/" class="btn-primary">Solicitar Demo de Seguridad</a>
+            <a href="/neurocore/" class="btn-secondary">Explorar Neurocore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE METRICS SECTION -->
+    <section class="section-padding" style="background: rgba(2, 6, 23, 0.4); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// MÉTRICAS DE RENDIMIENTO</span>
+          <h2 class="section-title">Ingeniería de Alto Impacto</h2>
+          <p>Nuestros sistemas de defensa operan a nivel de núcleo para mitigar amenazas antes de que afecten la continuidad operativa.</p>
+        </div>
+
+        <div class="grid-metrics">
+          <div class="metric-card glass-panel cyber-corners">
+            <div class="metric-value cyan-glow">&lt; 0.35ms</div>
+            <div class="metric-label">Mitigación de Amenazas</div>
+            <div class="metric-desc">Aislamiento y respuesta automática de endpoints a nivel de hardware.</div>
+          </div>
+          <div class="metric-card glass-panel cyber-corners">
+            <div class="metric-value">99.999%</div>
+            <div class="metric-label">Disponibilidad del Sistema</div>
+            <div class="metric-desc">Arquitectura redundante de grado industrial para operaciones continuas.</div>
+          </div>
+          <div class="metric-card glass-panel cyber-corners">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Soberanía de Código</div>
+            <div class="metric-desc">Desarrollo in-house con auditoría abierta. Cero dependencias globales de terceros.</div>
+          </div>
+          <div class="metric-card glass-panel cyber-corners">
+            <div class="metric-value">10M+</div>
+            <div class="metric-label">EPS Procesados</div>
+            <div class="metric-desc">Procesamiento y análisis de eventos de red por segundo sin latencia.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SOLUTIONS (BENTO GRID) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// CORE SOLUTIONS</span>
+          <h2 class="section-title">Ecosistema de Ciber-Resistencia</h2>
+          <p>Infraestructura blindada y detección autónoma para la soberanía de datos empresariales.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Item 1: Neurocore (Wide) -->
+          <div class="bento-item wide glass-panel cyber-corners">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 class="bento-title">Neurocore Cyber-Defense</h3>
+              <p class="bento-desc">Detección y respuesta autónoma (EDR/SIEM). Análisis en tiempo real de tráfico y eventos mediante Edge AI local que aísla amenazas en menos de 0.35ms a nivel del kernel de red.</p>
+            </div>
+            <a href="/neurocore/" class="bento-link">
+              Detalles de Neurocore 
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Item 2: Vanguard OS (Narrow) -->
+          <div class="bento-item narrow glass-panel cyber-corners">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="bento-title">Vanguard OS</h3>
+              <p class="bento-desc">Entorno de ciber-soberanía para el control inmutable de infraestructura crítica.</p>
+            </div>
+            <a href="/vanguard-os/" class="bento-link">
+              Detalles de Vanguard OS
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Item 3: Servicios (Narrow) -->
+          <div class="bento-item narrow glass-panel cyber-corners">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="bento-title">Auditoría &amp; Red Team</h3>
+              <p class="bento-desc">Pentesting avanzado, análisis de vulnerabilidades automatizado e ingeniería de arquitectura segura.</p>
+            </div>
+            <a href="/servicios/" class="bento-link">
+              Ver Servicios
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Item 4: Nosotros (Wide) -->
+          <div class="bento-item wide glass-panel cyber-corners">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="bento-title">Soberanía de Datos desde Latinoamérica</h3>
+              <p class="bento-desc">Romper la dependencia tecnológica global. En NCV Systems diseñamos software de bajo nivel auditado por completo, garantizando inmunidad ante puertas traseras geopolíticas y fugas no autorizadas.</p>
+            </div>
+            <a href="/nosotros/" class="bento-link">
+              Nuestra Filosofía
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TARGET SECTION -->
+    <section class="section-padding" style="background: rgba(2, 6, 23, 0.4); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// SECTORES DE EXIGENCIA CRÍTICA</span>
+          <h2 class="section-title">Para Entidades que no Admiten Fallos</h2>
+          <p>Nuestra plataforma está optimizada para industrias altamente reguladas con demandas extremas de privacidad e integridad de datos.</p>
+        </div>
+
+        <div class="target-sectors">
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Banca y Entidades Financieras</h3>
+            <p>Prevención de fraudes en milisegundos, aislamiento instantáneo de servidores de transacciones ante anomalías y blindaje de endpoints financieros.</p>
+          </div>
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Infraestructura Crítica</h3>
+            <p>Resguardo de redes SCADA/ICS, despliegue local en entornos desconectados (Air-Gapped) y control total sobre el flujo de telecomunicaciones.</p>
+          </div>
+          <div class="sector-card glass-panel">
+            <h3 class="sector-name">Organismos Gubernamentales</h3>
+            <p>Autonomía operativa frente a presiones cibernéticas extranjeras, registros inmutables a prueba de manipulación e interoperabilidad cifrada de alta seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-global">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            NCV SYSTEMS
+          </a>
+          <p class="footer-desc">Ciberseguridad de grado industrial y soberanía tecnológica B2B para Latinoamérica y el mundo.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Productos</h4>
+          <ul class="footer-links">
+            <li><a href="/neurocore/" class="footer-link">Neurocore Cyber-Defense</a></li>
+            <li><a href="/vanguard-os/" class="footer-link">Vanguard OS</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="/servicios/" class="footer-link">Servicios de Red Team</a></li>
+            <li><a href="/nosotros/" class="footer-link">Filosofía y Misión</a></li>
+            <li><a href="/contacto/" class="footer-link">Portal de Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="/contacto/" class="footer-link">Canal de Reporte Seguro</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 NCV Systems. Todos los derechos reservados.</span>
+        
+        <div class="status-widget">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span>STATUS DE RED: OPERATIVO</span>
+          </div>
+          <span class="enc-badge">ENC: TLSv1.3 // SECURE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/app.js"></script>
+  <script src="/js/canvas-bg.js"></script>
 </body>
 </html>

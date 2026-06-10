@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Contacto Seguro B2B | NCV Systems</title>
+  <meta name="description" content="Póngase en contacto con NCV Systems. Canal de enlace corporativo cifrado para solicitudes de demostración de seguridad, auditorías e incidentes críticos.">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <style>
+    .pgp-box {
+      background: rgba(30, 41, 59, 0.2);
+      border: 1px dashed var(--border-cyan);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+    
+    .pgp-code {
+      display: block;
+      white-space: pre-wrap;
+      color: var(--text-secondary);
+      margin: 1rem 0;
+      background: #020617;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-light);
+      max-height: 150px;
+      overflow-y: auto;
+    }
+    
+    .btn-download-pgp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL NAVIGATION HEADER -->
+  <header class="header-global">
+    <div class="container nav-container">
+      <a href="/" class="logo-link">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        NCV SYSTEMS
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">&#x2630;</button>
+      
+      <ul class="nav-menu" role="navigation">
+        <li><a href="/" class="nav-link">Inicio</a></li>
+        <li><a href="/neurocore/" class="nav-link">Neurocore</a></li>
+        <li><a href="/vanguard-os/" class="nav-link">Vanguard OS</a></li>
+        <li><a href="/servicios/" class="nav-link">Servicios</a></li>
+        <li><a href="/nosotros/" class="nav-link">Nosotros</a></li>
+        <li><a href="/contacto/" class="nav-link">Contacto</a></li>
+        <li><a href="/contacto/" class="btn-cta">Solicitar Demo</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- SUBPAGE HERO -->
+    <section class="subpage-hero">
+      <div class="container">
+        <span class="section-tag">// PORTAL DE ENLACE CORPORATIVO</span>
+        <h1 class="hero-title">CONTACTO <span>SEGURO</span></h1>
+        <p class="hero-desc" style="max-width: 700px;">Canal de comunicación cifrado para demostraciones comerciales, consultorías y reportes de incidentes de seguridad.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Column 1: Secure Form -->
+          <div class="glass-panel cyber-corners" style="padding: 2.5rem;">
+            <h2 class="font-tech" style="font-size: 1.25rem; margin-bottom: 2rem; color: var(--accent-cyan);">Formulario de Enlace Cifrado</h2>
+            
+            <form id="secureContactForm" class="secure-form" novalidate>
+              <!-- Honeypot field for anti-bot spam protection -->
+              <div style="display:none;">
+                <label for="honeypot">No rellenar este campo</label>
+                <input type="text" name="honeypot" id="honeypot">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="name">Nombre Completo <span class="required">*</span></label>
+                <input class="form-input" type="text" id="name" required placeholder="Nombre del solicitante" autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="company">Empresa / Entidad <span class="required">*</span></label>
+                <input class="form-input" type="text" id="company" required placeholder="Nombre de la corporación" autocomplete="organization">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="role">Cargo / Función</label>
+                <input class="form-input" type="text" id="role" placeholder="Ej: Director de Ciberseguridad / CISO">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Correo Corporativo <span class="required">*</span></label>
+                <input class="form-input" type="email" id="email" required placeholder="ejemplo@empresa.com" autocomplete="email">
+                <div id="emailFeedback" class="form-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="urgency">Nivel de Urgencia <span class="required">*</span></label>
+                <select class="form-select" id="urgency" required>
+                  <option value="low" selected>Bajo // Consulta General o Comercial</option>
+                  <option value="medium">Medio // Solicitud de Auditoría o Demo Técnica</option>
+                  <option value="critical">Crítico // CSIRT Activo / Respuesta a Incidente</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Mensaje <span class="required">*</span></label>
+                <textarea class="form-textarea" id="message" required placeholder="Escriba los detalles de su requerimiento. Toda la información será procesada con absoluta reserva."></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn-primary" style="margin-top: 1rem; width: 100%;">Transmitir Mensaje Seguro</button>
+            </form>
+
+            <!-- Simulated Terminal Console box (Hidden by default, shown on submit) -->
+            <div id="consoleContainer" class="console-box" style="margin-top: 2rem; display: none;">
+              <div class="console-header">
+                <div class="console-dots">
+                  <div class="console-dot" style="background-color: #ef4444;"></div>
+                  <div class="console-dot" style="background-color: #f97316;"></div>
+                  <div class="console-dot" style="background-color: #22c55e;"></div>
+                </div>
+                <span class="console-title">SECURE TRANSMISSION TUNNEL</span>
+              </div>
+              <div id="consoleBody" class="console-body">
+                <!-- Log output goes here via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Alternative details & PGP -->
+          <div>
+            <div class="cyber-panel cyber-corners" style="margin-bottom: 2.5rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent-cyan);">Canal de Emergencia 24/7</h3>
+              <p style="margin-bottom: 1rem;">Si experimenta un incidente cibernético activo (Ransomware, denegación de servicio, filtración) y es cliente registrado, por favor utilice nuestra línea cifrada directa:</p>
+              <p class="font-tech" style="font-size: 1.1rem; color: var(--text-primary);">
+                TEL // +56 2 2987 6543
+              </p>
+              <p class="metric-desc" style="margin-top: 0.5rem; color: var(--accent-red);">
+                ▲ Nota: La línea telefónica de emergencia está reservada estrictamente para incidentes de nivel Crítico.
+              </p>
+            </div>
+
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Cifrado Manual PGP</h3>
+            <p>Si prefiere cifrar su mensaje manualmente en su cliente de correo antes de enviarlo por email directo, puede utilizar nuestra Llave Pública PGP Oficial.</p>
+
+            <div class="pgp-box">
+              <span>NCV SYSTEMS PUBLIC KEY</span>
+              <pre class="pgp-code">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP v2.1.2
+Comment: key.ncvsystems.com
+
+mQINBGNCSREBEADMx1d9...
+38bdf8e984d722c55e...
+...10ef4444f97316...
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+              <a href="#" class="btn-download-pgp" onclick="alert('Descarga de llave pública PGP iniciada.'); return false;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Descargar llave pública (.asc)
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-global">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            NCV SYSTEMS
+          </a>
+          <p class="footer-desc">Ciberseguridad de grado industrial y soberanía tecnológica B2B para Latinoamérica y el mundo.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Productos</h4>
+          <ul class="footer-links">
+            <li><a href="/neurocore/" class="footer-link">Neurocore Cyber-Defense</a></li>
+            <li><a href="/vanguard-os/" class="footer-link">Vanguard OS</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="/servicios/" class="footer-link">Servicios de Red Team</a></li>
+            <li><a href="/nosotros/" class="footer-link">Filosofía y Misión</a></li>
+            <li><a href="/contacto/" class="footer-link">Portal de Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Soporte</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Términos de Servicio</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="/contacto/" class="footer-link">Canal de Reporte Seguro</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2026 NCV Systems. Todos los derechos reservados.</span>
+        
+        <div class="status-widget">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span>STATUS DE RED: OPERATIVO</span>
+          </div>
+          <span class="enc-badge">ENC: TLSv1.3 // SECURE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/contacto.js"></script>
+</body>
+</html>
